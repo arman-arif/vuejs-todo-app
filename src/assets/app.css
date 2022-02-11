@@ -1,0 +1,50 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@layer base {
+    h1 {
+        @apply text-2xl font-bold;
+    }
+}
+
+@layer components {
+    .app-wrap {
+        @apply flex w-full h-screen bg-slate-900 justify-center items-center fixed overflow-y-scroll m-0;
+    }
+    .app-body {
+        @apply flex flex-col bg-white px-6 min-h-[500px] h-[calc(100%_-_6rem)] min-w-[600px] max-w-[60%] rounded-lg shadow-lg my-6;
+    }
+    .app-title {
+        @apply text-3xl font-bold;
+    }
+    .btn-blue {
+        @apply bg-sky-600 border-sky-600 border text-white p-2 w-[10%];
+    }
+    .badge-danger {
+        @apply ml-3 text-xs bg-red-dark w-[18px] h-[18px] rounded-2xl text-center text-white font-extrabold flex items-center justify-center border-2 border-red-dark;
+    }
+    .todo-input {
+        @apply w-[90%] py-2 px-3 border border-sky-600 rounded-none;
+    }
+    .app-footer {
+        @apply text-center text-slate-800 text-sm;
+    }
+    .tab-active {
+        @apply font-semibold px-10 p-[2px] text-white bg-sky-600 rounded-full;
+    }
+    .task-tab {
+        @apply inline-flex items-center w-1/3 flex justify-center;
+    }
+    .main {
+        @apply h-[calc(100%_-_6.35rem_-_4px)];
+    }
+    .task-tab-bar {
+        @apply py-3 flex justify-evenly;
+    }
+    .task-content {
+        @apply border-y h-[calc(100%_-_6.55rem)] overflow-y-auto;
+    }
+    .task {
+        @apply py-1 px-3 flex items-center;
+    }
+}
