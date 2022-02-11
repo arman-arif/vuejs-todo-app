@@ -7,7 +7,7 @@
 1. Clone the repo
     > `git clone https://github.com/arman-arif/vuejs-todo-app.git`
 2. The run the following commands
-    > cd vuejs-todo-app
+    > ``cd vuejs-todo-app``
 
     > ``npm install``
 
