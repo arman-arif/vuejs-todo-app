@@ -1,7 +1,7 @@
 <template>
   <div class="task" :class="color" @click="$emit('toggle-task')">
     <TaskIcon :status="todo.status" icon="solid" />
-    <div class="leading-none pt-1">
+    <div class="leading-tight">
       <h3 class="font-bold">{{ todo.task }}</h3>
       <p class="text-sm text-gray-600">{{ todo.time }}</p>
     </div>

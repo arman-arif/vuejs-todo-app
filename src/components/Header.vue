@@ -1,6 +1,6 @@
 <template>
   <div class="p-4 text-center">
-    <h1 class="app-title uppercase">{{ appTitle }}</h1>
+    <h1 class="app-title uppercase">{{ title }}</h1>
   </div>
 </template>
 
@@ -9,7 +9,7 @@ export default {
   name: "Header",
   props: ["appTitle"],
   computed: {
-    appTitle() {
+    title() {
       return this.appTitle ?? "Todo App";
     },
   },

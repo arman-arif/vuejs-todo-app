@@ -1,12 +1,13 @@
 <template>
   <div class="app-wrap">
     <div class="app-body">
-      <Header appTitle="Todo Task" />
+      <Header :appTitle="'Todo Task'" />
       <main class="main">
         <slot name="top" />
         <div class="task-content">
           <slot />
         </div>
+        <slot name="bottom" />
       </main>
       <Footer />
     </div>
