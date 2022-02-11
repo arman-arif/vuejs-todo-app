@@ -36,28 +36,30 @@ export default {
     Task,
     ClearButton,
   },
+  mounted() {
+    const todos = JSON.parse(localStorage.getItem("todos"));
+    if (todos) {
+      this.todos = todos;
+    } else {
+      this.todos = [
+        {
+          id: this.todos.length + Date.now(),
+          task: "Start your day with a awesome task! :)",
+          time: "Feb 10, 2022 at 10:00 AM",
+          status: true,
+        },
+      ];
+      localStorage.setItem("todos", JSON.stringify(this.todos));
+    }
+  },
+  watch: {
+    "todos.length"(oldTodos, newTodos) {
+      localStorage.setItem("todos", JSON.stringify(this.todos));
+    },
+  },
   data() {
     return {
-      todos: [
-        {
-          id: 1,
-          task: "The Task 1",
-          time: "Feb 10, 2022 at 10:00 AM",
-          status: false,
-        },
-        {
-          id: 2,
-          task: "The Task 2",
-          time: "Feb 10, 2022 at 10:00 AM",
-          status: true,
-        },
-        {
-          id: 3,
-          task: "The Task 3",
-          time: "Feb 10, 2022 at 10:00 AM",
-          status: true,
-        },
-      ],
+      todos: [],
       error: false,
       newTodo: "",
       filter: "all",
