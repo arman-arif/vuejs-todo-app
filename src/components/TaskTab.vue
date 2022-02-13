@@ -1,32 +1,29 @@
 <template>
   <div class="task-tab-bar">
-    <a
-      href="#"
+    <button
       class="task-tab"
       :class="{ 'tab-active': active.all }"
       @click="showAll"
     >
       All
       <span class="badge-danger">{{ todoCount.all }}</span>
-    </a>
-    <a
-      href="#"
+    </button>
+    <button
       class="task-tab"
       :class="{ 'tab-active': active.pending }"
       @click="showPending"
     >
       Pending
       <span class="badge-danger">{{ todoCount.pending }}</span>
-    </a>
-    <a
-      href="#"
+    </button>
+    <button
       class="task-tab"
       :class="{ 'tab-active': active.done }"
       @click="showDone"
     >
-      Done
+      Completed
       <span class="badge-danger">{{ todoCount.done }}</span>
-    </a>
+    </button>
   </div>
 </template>
 
